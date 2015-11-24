@@ -2,10 +2,8 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__.'/bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
-//ddd('lalalal');
 $container = new Container($configuration);
 $pdo = $container->getPDO();
 
@@ -18,7 +16,6 @@ $ships[] = $rebelShip;
 
 $brokenShip = new BrokenShip('Broken ship madafeker');
 $ships[] = $brokenShip;
-d($ships);
 
 $errorMessage = '';
 if (isset($_GET['error'])) {
